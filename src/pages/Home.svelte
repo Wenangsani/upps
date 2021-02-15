@@ -15,12 +15,18 @@
     },
   ];
 
-  function openform(h, i) {
+  function closeall() {
     for (var item of listMenu) {
       for (var doc of item.Dokumen) {
         doc.hidden = true;
       }
     }
+    listMenu = listMenu;
+  }
+
+  function openform(h, i) {
+
+    closeall();
 
     if (typeof listMenu[h].Dokumen[i].hidden === "undefined") {
       listMenu[h].Dokumen[i].hidden = false;
@@ -29,6 +35,10 @@
     }
 
     listMenu = listMenu;
+  }
+
+  function dosave() {
+    closeall();
   }
 
   function checklengkap(h, i) {
@@ -59,9 +69,8 @@
           <!-- Informasi -->
           <li class="list-group-item">
             <h5 class="text-primary">{No} - {Lingkup}</h5>
-            <div>Auditee : {Auditee}</div>
             <div class="alert alert-secondary mt-2 p-2">
-              Catatan:
+              Catatan :
               <ul>
                 {#each Catatan as cat}
                   <li>
@@ -69,6 +78,7 @@
                   </li>
                 {/each}
               </ul>
+              <div>Auditee : {Auditee}</div>
             </div>
           </li>
           <!-- Name list-->
@@ -79,15 +89,10 @@
                 : "list-group-item"}
             >
               <h6 on:click={() => openform(h, i)} style="cursor:pointer">
-                {#if checklengkap(h, i)}
-                  <i class="fa fa-check-circle text-success" />
-                {:else}
-                  <i class="fa fa-circle" />
-                {/if}
                 {Name}
               </h6>
               <div class={hidden === false ? "d-block" : "d-none"}>
-                <div class="mt-4">
+                <div class="mt-2 p-2">
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -126,7 +131,7 @@
                     >
                   </div>
                 </div>
-                <div class="mt-2">
+                <div class="p-2">
                   <div class="row">
                     <div class="col-md-9">
                       <span class="form-label">Nama Dokumen</span>
@@ -138,7 +143,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="mt-2">
+                <div class="p-2">
                   <div>Files</div>
                   <div>
                     <input class="form-control" type="file" />
@@ -147,12 +152,13 @@
                     <input class="form-control mt-1" type="file" />
                   </div>
                 </div>
-                <div class="mt-2">
+                <div class="p-2">
                   <span class="form-label">Catatan</span>
                   <textarea class="form-control" />
                 </div>
-                <div class="mt-2 mb-4">
-                  <button class="btn btn-primary"><i class="fa fa-check"></i> Save</button>
+                <div class="mb-4 p-2">
+                  <button on:click={() => dosave()} class="btn btn-primary"><i class="fa fa-check"></i> Save</button>
+                  <button on:click={() => dosave()} class="btn btn-warning"><i class="fa fa-times"></i> Cancel</button>
                 </div>
               </div>
             </li>
@@ -163,7 +169,6 @@
   </div>
 </div>
 
-<Footer />
 
 <style>
   :global(.bg-formactive) {

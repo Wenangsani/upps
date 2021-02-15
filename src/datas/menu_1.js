@@ -142,7 +142,7 @@ export default [
   },
   {
     No: "5",
-    "Lingkup Audit": "Evaluasi VMTS dan Tata Nilai",
+    Lingkup: "Evaluasi VMTS dan Tata Nilai",
     Auditee: "Dekan, Direktur, Koordinator Prodi di bawah Rektor, GPM",
     Dokumen: [
       {
@@ -174,6 +174,147 @@ export default [
     Catatan: [
       "Evaluasi pemahaman minimal dilakukan 1 kali dalam 1 tahun, tersedia laporan  3 tahun (2017-2019)",
       "Evaluasi pencapaian indikator  minimal dilakukan 1 kali dalam 1 tahun, tersedia laporan  3 tahun (2017-2019)",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "6",
+    Lingkup: "Tindak Lanjut Evaluasi VMTS dan tata nilai",
+    Auditee: "Dekan, Direktur, Koordinator PS di bawah Rektor",
+    Dokumen: [
+      {
+        Name:
+          "Bukti tindak lanjut laporan hasil evaluasi pemahaman dan pencapaian indikator VMTS dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RKF.",
+      },
+    ],
+    Catatan: [
+      "Minimal dilakukan 1 kali dalam 1 tahun, tersedia data 3 tahun (2017-2019)",
+      "Evaluasi pencapaian indikator  minimal dilakukan 1 kali dalam 1 tahun, tersedia laporan  3 tahun (2017-2019)",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "7",
+    Lingkup:
+      "Pelaksanaan VMTS dan tatanilai : Dokumen bukti pelaksanaan kegiatan berdasarkan perencanaan dan mendukung pencapaian VMTS",
+    Auditee:
+      "Dekan, Direktur, Koordinator Prodi di bawah Rektor, Swmua Wakil Dekan/Direktur, Ketua Prodi di bawah Rektor, Ka TU",
+    Dokumen: [
+      {
+        Name: "RPJP yang memiliki legalitas formal",
+      },
+      {
+        Name: "Renstra yang memiliki legalitas formal",
+      },
+      {
+        Name: "Renop yang memiliki legalitas formal",
+      },
+      {
+        Name:
+          "Dokumen perencanaan dan implementasi visi, misi, tujuan dan sasaran yang lain",
+      },
+      {
+        Name: "Pedoman Akademik yang memiliki legalitas formal",
+      },
+      {
+        Name: "Kurikulum yang memiliki legalitas formal",
+      },
+      {
+        Name: "Rencana Induk penelitian yang memiliki legalitas formal",
+      },
+      {
+        Name:
+          "Rencana induk pengabdian kepada masyarakat yang memiliki legalitas formal",
+      },
+      {
+        Name:
+          "Dokumen penjaminan mutu, manual SPMI, standar SPMI dan formulir mutu (termasuk di dalamnya SOP dan IK), pedoman AMI, pedoman evaluasi diri (format dan isi yg harus ada)",
+      },
+    ],
+    Catatan: [],
+  },
+  {
+    No: "8",
+    Lingkup: "Sosialisasi Dokumen program pelaksanaan VMTS",
+    Auditee:
+      "Dekan/Direktur, Koordinator Prodi di bawah Rektor, Semua Wakil Dekan/Direktur, Ka Prodi di bwah Rektor",
+    Dokumen: [
+      {
+        Name:
+          "SK Tim sosialisasi dokumen RPJP, Renstra, Renop, RIP, RIPengmas, Kurikulum,  Pedoman akademik, Kebijakan SPMI, Manual SPMI, Standar SPMI, Formulir SPMI, Pedoman AMI, Pedoman Evaluasi Diri",
+      },
+      {
+        Name: "SOP sosialisasi",
+      },
+      {
+        Name: "Media dan metode sosialisasi",
+      },
+      {
+        Name:
+          "Laporan sosialisasi (dijadikan  1 berkas bersama dengan SK, SOP dan metode)",
+      },
+    ],
+    Catatan: [
+      "Minimal dilakukan 1 kali dalam 1 tahun, tersedia data 3 tahun (2017-2019)",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "9",
+    Lingkup:
+      "Dokumen bukti pelaksanaan kegiatan berdasarkan perencanaan dan mendukung pencapaian VMTS",
+    Auditee:
+      "Dekan, Direktur, Koordinator PS di bawah Rektor, Semua Wakil Dekan/  Direktur, Ka Prodi di bawah Rektor,  Ka TU",
+    Dokumen: [
+      {
+        Name: "SK tim penyusun evaluasi diri",
+      },
+      {
+        Name: "SK tim Penyusun evaluasi pencapaian Indikator Renstra dan Renop",
+      },
+      {
+        Name: "SK Tupoksi pelaksana penyusun LAKIP",
+      },
+      {
+        Name: "SOP Evaluasi ",
+      },
+      {
+        Name: "Dokumen pelaksanaan kinerja tim",
+      },
+      {
+        Name: "Instrumen yang digunakan",
+      },
+      {
+        Name:
+          "Laporan evaluasi diri (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+      },
+      {
+        Name:
+          "Laporan evaluasi pencapaian indikator Renstra dan Renop (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+      },
+      {
+        Name:
+          "LAKIP (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+      },
+    ],
+    Catatan: [
+      "Tersedia untuk setiap tahun (3 tahun terakhir : 2017-2019)",
+      "Dokumen bukti sosialisasi setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "10",
+    Lingkup:
+      "Tindak Lanjut hasil Evaluasi Pelaksanaan Kegiatan (Evaluasi Diri, Indikator Renstra dan Renop)",
+    Auditee: "Dekan. Direktur, Koordinator PS di bawah Rektor",
+    Dokumen: [
+      {
+        Name:
+          "Bukti tindak lanjut laporan hasil evaluasi diri, pencapaian indkator Resntra dan Renop, Lakip dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM.",
+      },
+    ],
+    Catatan: [
+      "Minimal 1 kali dalam tersedia dalam 3 tahun : 2017-2019",
       "Dokumen bukti setiap tahun dijadikan 1 berkas",
     ],
   },
