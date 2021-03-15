@@ -89,7 +89,7 @@
                 : "list-group-item"}
             >
               <h6 on:click={() => openform(h, i)} style="cursor:pointer">
-                {Name}
+                {i + 1} . {Name}
               </h6>
               <div class={hidden === false ? "d-block" : "d-none"}>
                 <div class="mt-2 p-2">
