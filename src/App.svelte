@@ -4,6 +4,9 @@
 </svelte:head>
 
 <script>
+
+	window.API = "http://localhost/unapi";
+
 	import { Router, Link, Route } from "svelte-routing";
 
 	import Home from "./pages/Home.svelte";

@@ -1,9 +1,9 @@
 <script>
-  import NavbarGuest from "../component/navbar_guest.svelte";
+  import Navbar from "../component/navbar.svelte";
   import Footer from "../component/footer.svelte";
 </script>
 
-<NavbarGuest />
+<Navbar />
 
 <div class="container mb-4" style="margin-top:100px;">
   <div class="row justify-content-md-center mt-4">

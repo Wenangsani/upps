@@ -1,5 +1,5 @@
 <script>
-  import NavbarGuest from "../component/navbar_guest.svelte";
+  import Navbar from "../component/navbar.svelte";
   import Footer from "../component/footer.svelte";
 
   let listInstructor = [
@@ -336,7 +336,7 @@
   ];
 </script>
 
-<NavbarGuest />
+<Navbar />
 
 <div
   class="text-center bg-light"

@@ -1,27 +1,29 @@
 <script>
-  function domenu() {
-    alert("Menu belum tersedia...");
-  }
+  import { active_item } from "../store";
+  import { onMount } from "svelte";
+
+  export let menus;
+
+  onMount(() => {
+    active_item.update(() => menus[0].No);
+  });
+
+  let gclass = "list-group-item list-group-item-action";
+
+  let changeActive = (no) => {
+    active_item.update(() => no);
+  };
 </script>
 
 <nav class="list-group">
-  <a href="#!" class="list-group-item list-group-item-action">KRITERIA 1: VISI, MISI, TUJUAN DAN STRATEGI</a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action">KRITERIA 2: TATA PAMONG DAN TATA KELOLA</a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action">KRITERIA 3: MAHASISWA</a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action">KRITERIA 4: SUMBER DAYA</a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action"
-    >KRITERIA 5: KEUANGAN, SARANA, DAN PRASARANA
-  </a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action"
-    >KRITERIA 6: KURIKULUM
-  </a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action"
-    >KRITERIA 7: PENELITIAN
-  </a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action"
-    >KRITERIA 8: PENGABDIAN KEPADA MASYARAKAT
-  </a>
-  <a href="#!" on:click={domenu} class="list-group-item list-group-item-action"
-    >KRITERIA 9: LUARAN DAN CAPAIAN TRIDHARMA
-  </a>
+  {#each menus as menu}
+    <a
+      href="#!"
+      on:click={() => {
+        changeActive(menu.No);
+      }}
+      class={$active_item == menu.No ? gclass + " active" : gclass}>
+      {menu.No} » {menu.Lingkup}
+    </a>
+  {/each}
 </nav>
