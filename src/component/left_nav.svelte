@@ -23,7 +23,10 @@
         changeActive(menu.No);
       }}
       class={$active_item == menu.No ? gclass + " active" : gclass}>
-      {menu.No} » {menu.Lingkup}
+      <div>{menu.No} » {menu.Lingkup}</div>
+      <div class="text-muted" style="margin-left:1.6rem">
+        <small><i class="fa fa-check-circle"></i> 1/{menu.Dokumen.length}</small>
+      </div>
     </a>
   {/each}
 </nav>

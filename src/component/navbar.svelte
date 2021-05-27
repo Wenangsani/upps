@@ -44,7 +44,7 @@
               on:click={() => {
                 kriteriamenu_active = !kriteriamenu_active;
               }}>
-              KRITERIA
+              <i class="fa fa-list-alt"></i> KRITERIA
             </a>
             <ul class={kriteriamenu_active ? "dropdown-menu show" : "dropdown-menu"}>
               {#each kriterias as kriteria, i}
@@ -55,7 +55,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#!" class="nav-link">EXPORT</a>
+            <a href="#!" class="nav-link">
+              <i class="fa fa-download"></i> EXPORT
+            </a>
           </li>
         {/if}
       </ul>

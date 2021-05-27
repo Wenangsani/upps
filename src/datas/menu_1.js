@@ -196,7 +196,7 @@ export default [
   {
     No: "7",
     Lingkup:
-      "Pelaksanaan VMTS dan tatanilai : Dokumen bukti pelaksanaan kegiatan berdasarkan perencanaan dan mendukung pencapaian VMTS",
+      "Pelaksanaan VMTS dan tatanilai: Dokumen bukti pelaksanaan kegiatan berdasarkan perencanaan dan mendukung pencapaian VMTS",
     Auditee:
       "Dekan, Direktur, Koordinator Prodi di bawah Rektor, Swmua Wakil Dekan/Direktur, Ketua Prodi di bawah Rektor, Ka TU",
     Dokumen: [

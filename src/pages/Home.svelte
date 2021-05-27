@@ -5,6 +5,8 @@
   import LeftNav from "../component/left_nav.svelte";
   import Item from "../component/item.svelte";
   import Menu1 from "../datas/menu_1";
+  import { navigate } from "svelte-routing";
+  import { auth } from "../store";
 
   let listMenu = Menu1;
 
@@ -18,6 +20,10 @@
 
   onMount(async () => {
     // document.getElementById("mainvideo").play();
+    // Redirect if user no login
+    if ($auth === false) {
+      navigate("/login", { replace: true });
+    }
   });
 </script>
 

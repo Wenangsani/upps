@@ -4,24 +4,20 @@
   export let userdata;
 
   function closeall() {
-    for (var item of listMenu) {
-      for (var doc of item.Dokumen) {
+    for (var doc of menu.Dokumen) {
         doc.hidden = true;
-      }
     }
-    listMenu = listMenu;
   }
 
   function openform(h, i) {
-    // closeall();
+    closeall();
 
-    if (typeof listMenu[h].Dokumen[i].hidden === "undefined") {
-      listMenu[h].Dokumen[i].hidden = false;
-    } else if (listMenu[h].Dokumen[i].hidden === true) {
-      listMenu[h].Dokumen[i].hidden = false;
+    if (typeof menu.Dokumen[i].hidden === "undefined") {
+      menu.Dokumen[i].hidden = false;
+    } else if (menu.Dokumen[i].hidden === true) {
+      menu.Dokumen[i].hidden = false;
     }
 
-    listMenu = listMenu;
   }
 
   function dosave() {
@@ -42,7 +38,7 @@
 <ul class="list-group" style="margin-bottom:4rem">
   <!-- Informasi -->
   <li class="list-group-item">
-    <h5 class="text-primary">{menu.No} - {menu.Lingkup}</h5>
+    <h5 class="text-dark fw-bold">{menu.No} » {menu.Lingkup}</h5>
     <div class="alert alert-secondary mt-2 p-2">
       Catatan :
       <ul>
