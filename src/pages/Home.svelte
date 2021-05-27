@@ -10,14 +10,6 @@
 
   let listMenu = Menu1;
 
-  let userdata = [
-    {
-      No: "1.1",
-      lengkap: 1,
-      nama_dokumen: "safdsafsaf safsafsaf"
-    },
-  ];
-
   onMount(async () => {
     // document.getElementById("mainvideo").play();
     // Redirect if user no login
@@ -35,9 +27,9 @@
       <LeftNav menus={listMenu} />
     </div>
     <div class="col-md-8">
-      {#each listMenu as menu, h}
+      {#each listMenu as menu}
         {#if $active_item == menu.No}
-          <Item userdata={userdata} menu={menu} h={h} />
+          <Item {menu} />
         {/if}
       {/each}
     </div>
@@ -46,6 +38,6 @@
 
 <style>
   :global(.bg-formactive) {
-    background-color: #f0f8fd !important;
+    border: 2px solid #9cc4ff !important;
   }
 </style>
