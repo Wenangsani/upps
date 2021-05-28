@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { active_item } from "../store";
+  import { active_item, userdata } from "../store";
   import Menu1 from "../datas/menu_1";
   import { navigate } from "svelte-routing";
   import { auth } from "../store";
@@ -11,10 +11,28 @@
   let menus = Menu1;
 
   onMount(async () => {
-    // document.getElementById("mainvideo").play();
+
     // Redirect if user no login
     if ($auth === false) {
+
       navigate("/login", { replace: true });
+
+    } else {
+
+      userdata.update(() => [
+          {
+              sub: "1.1",
+              item: 1,
+              lengkap: 1,
+              dokumen: "Ayam kampung",
+              halaman: 100,
+              catatan: "ini ...",
+              files_1: "https://www.google.com/asfsaf.zip",
+              files_2: "",
+              files_3: "",
+              files_4: ""
+          }
+      ]);
     }
   });
 </script>

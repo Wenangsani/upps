@@ -4,11 +4,11 @@
 
   export let menus;
 
+  let gclass = "list-group-item list-group-item-action";
+
   onMount(() => {
     active_item.update(() => menus[0].No);
   });
-
-  let gclass = "list-group-item list-group-item-action";
 
   let changeActive = (no) => {
     active_item.update(() => no);
@@ -22,7 +22,7 @@
       on:click={() => {
         changeActive(menu.No);
       }}
-      class={$active_item == menu.No ? gclass + " list-group-item-light" : gclass}>
+      class={$active_item == menu.No ? gclass + " list-group-item-dark" : gclass}>
       <div>{menu.No} » {menu.Lingkup}</div>
     </a>
   {/each}

@@ -1,23 +1,28 @@
 <script>
-  import { auth } from "../store";
-  import { link } from "svelte-routing";
+  import { auth, active_sub } from "../store";
+  import { link, navigate } from "svelte-routing";
 
   let usermenu_active, kriteriamenu_active = false;
   let kriterias = [
-    "KRITERIA 1 » VISI, MISI, TUJUAN DAN STRATEGI",
-    "KRITERIA 2 » TATA PAMONG DAN TATA KELOLA",
-    "KRITERIA 3 » MAHASISWA",
-    "KRITERIA 4 » SUMBER DAYA",
-    "KRITERIA 5 » KEUANGAN, SARANA, DAN PRASARANA",
-    "KRITERIA 6 » KURIKULUM",
-    "KRITERIA 7 » PENELITIAN",
-    "KRITERIA 8 » PENGABDIAN KEPADA MASYARAKAT",
-    "KRITERIA 9 » LUARAN DAN CAPAIAN TRIDHARMA"
+    "1 » VISI, MISI, TUJUAN DAN STRATEGI",
+    "2 » TATA PAMONG DAN TATA KELOLA",
+    "3 » MAHASISWA",
+    "4 » SUMBER DAYA",
+    "5 » KEUANGAN, SARANA, DAN PRASARANA",
+    "6 » KURIKULUM",
+    "7 » PENELITIAN",
+    "8 » PENGABDIAN KEPADA MASYARAKAT",
+    "9 » LUARAN DAN CAPAIAN TRIDHARMA"
   ];
 
   let logout = () => {
     window.localStorage.removeItem("auth");
     auth.update(() => false);
+    navigate("/login", { replace: true });
+  };
+
+  let change_criteria = (i) => {
+    active_sub.update(() => i + 1);
   };
 </script>
 
@@ -49,7 +54,7 @@
             <ul class={kriteriamenu_active ? "dropdown-menu show" : "dropdown-menu"}>
               {#each kriterias as kriteria, i}
                 <li>
-                  <a href={i} class="dropdown-item">{kriteria}</a>
+                  <a href="#!" on:click={() => change_criteria(i)} class={$active_sub == i + 1 ? "dropdown-item active" : "dropdown-item"}>{kriteria}</a>
                 </li>
               {/each}
             </ul>

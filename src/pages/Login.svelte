@@ -59,7 +59,7 @@
     <div class="col-md-4">
       {#if onload}
       <div class="text-center">
-        <div class="spinner-border text-primary" role="status">
+        <div class="spinner-grow text-primary" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>

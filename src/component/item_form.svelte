@@ -26,7 +26,6 @@
     data_files_2 = itemdata.files_2 || "";
     data_files_3 = itemdata.files_3 || "";
     data_files_4 = itemdata.files_4 || "";
-    console.log("reset userdata :", $userdata);
   };
 
   let cancel = () => {
@@ -53,9 +52,7 @@
       files_4: data_files_4,
     };
     let olddata = $userdata.filter((data) => data.sub != sub || data.item != i);
-    console.log("dosave olddata :", olddata);
     olddata.push(newdata);
-    console.log("dosave olddata :", olddata);
     userdata.update(() => olddata);
   };
 
@@ -70,19 +67,25 @@
         data_files_3 = link;
       } else if (!data_files_4) {
         data_files_4 = link;
+      } else {
+        alert("Maksimum 4 file.");
       }
     }
   };
+
+  let mclass = (pre) => {
+    return `${pre}_${sub.replace(".", "__")}_${i}`;
+  };
 </script>
 
-<div class={hidden === false ? "d-block" : "d-none"}>
+<div class={hidden === false ? "d-block mt-4" : "d-none"}>
   <div class="my-2 p-2">
     <div class="form-check form-check-inline">
       <label class="form-check-label text-success">
         <input
           class="form-check-input"
           type="radio"
-          name={"opt_" + sub + i}
+          name={mclass("opt")}
           value="1"
           checked={data_lengkap == 1 ? true : false} />Lengkap</label>
     </div>
@@ -92,7 +95,7 @@
         ><input
           class="form-check-input"
           type="radio"
-          name={"opt_" + sub + i}
+          name={mclass("opt")}
           value="2"
           checked={data_lengkap == 2 ? true : false} />Tidak Lengkap</label>
     </div>
@@ -102,7 +105,7 @@
         ><input
           class="form-check-input"
           type="radio"
-          name={"opt_" + sub + i}
+          name={mclass("opt")}
           value="3"
           checked={data_lengkap == 3 ? true : false} />Tidak Tersedia</label>
     </div>
@@ -133,14 +136,14 @@
       {:else}
         <button
           on:click={() => {
-            document.querySelector("#file_" + sub + i).click();
+            document.querySelector("#" + mclass("file")).click();
           }}
           class="btn btn-light">
           <i class="fa fa-arrow-circle-up" /> Upload
         </button>
         <input
           type="file"
-          id={"file_" + sub + i}
+          id={mclass("file")}
           style="display:none"
           on:change={() => {
             inupload = true;
@@ -156,28 +159,28 @@
         <div>
           <a href={data_files_1} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_1}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" /></span>
+          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_1 = ""}} /></span>
         </div>
       {/if}
       {#if data_files_2}
         <div>
           <a href={data_files_2} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_2}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" /></span>
+          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_2 = ""}} /></span>
         </div>
       {/if}
       {#if data_files_3}
         <div>
           <a href={data_files_3} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_3}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" /></span>
+          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_3 = ""}} /></span>
         </div>
       {/if}
       {#if data_files_4}
         <div>
           <a href={data_files_4} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_4}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" /></span>
+          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_4 = ""}} /></span>
         </div>
       {/if}
     </div>
