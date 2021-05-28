@@ -22,11 +22,8 @@
       on:click={() => {
         changeActive(menu.No);
       }}
-      class={$active_item == menu.No ? gclass + " active" : gclass}>
+      class={$active_item == menu.No ? gclass + " list-group-item-light" : gclass}>
       <div>{menu.No} » {menu.Lingkup}</div>
-      <div class="text-muted" style="margin-left:1.6rem">
-        <small><i class="fa fa-check-circle"></i> 1/{menu.Dokumen.length}</small>
-      </div>
     </a>
   {/each}
 </nav>

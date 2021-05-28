@@ -11,7 +11,12 @@ export const userdata = writable([
         sub: "1.1",
         item: 1,
         lengkap: 1,
-        nama_dokumen: "Ayam kampung",
-        halaman: 100
+        dokumen: "Ayam kampung",
+        halaman: 100,
+        catatan: "ini ...",
+        files_1: "https://www.google.com/asfsaf.zip",
+        files_2: "",
+        files_3: "",
+        files_4: ""
     },
 ]);

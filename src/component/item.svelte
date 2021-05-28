@@ -10,7 +10,7 @@
   };
 
   let closeform = (i) => {
-    menu.Dokumen[i].hidden = true;
+    menu.Dokumen[i - 1].hidden = true;
   };
 
   let openform = (i) => {
@@ -42,9 +42,9 @@
   {#each menu.Dokumen as { Name, hidden }, i}
     <li class={hidden === false ? "list-group-item bg-formactive" : "list-group-item"}>
       <h6 on:click={() => openform(i)} style="cursor:pointer">
-        {i + 1} . {Name}
+        {i + 1}. {Name}
       </h6>
-      <ItemForm sub={menu.No} {i} {hidden} {closeform} />
+      <ItemForm sub={menu.No} i={i + 1} {hidden} {closeform} />
     </li>
   {/each}
 </ul>

@@ -1,14 +1,14 @@
 <script>
   import { onMount } from "svelte";
   import { active_item } from "../store";
-  import Navbar from "../component/navbar.svelte";
-  import LeftNav from "../component/left_nav.svelte";
-  import Item from "../component/item.svelte";
   import Menu1 from "../datas/menu_1";
   import { navigate } from "svelte-routing";
   import { auth } from "../store";
+  import LeftNav from "../component/left_nav.svelte";
+  import Navbar from "../component/navbar.svelte";
+  import Item from "../component/item.svelte";
 
-  let listMenu = Menu1;
+  let menus = Menu1;
 
   onMount(async () => {
     // document.getElementById("mainvideo").play();
@@ -24,10 +24,10 @@
 <div class="container-xl" style="margin-top:25px">
   <div class="row">
     <div class="col-md-4">
-      <LeftNav menus={listMenu} />
+      <LeftNav {menus} />
     </div>
     <div class="col-md-8">
-      {#each listMenu as menu}
+      {#each menus as menu}
         {#if $active_item == menu.No}
           <Item {menu} />
         {/if}
