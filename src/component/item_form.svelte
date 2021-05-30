@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { userdata } from "../store";
+  import { auth, userdata } from "../store";
   export let sub;
   export let i;
   export let hidden;
@@ -17,15 +17,17 @@
   let data_files_4 = "";
 
   let reset = () => {
-    itemdata = $userdata.filter((data) => data.sub == sub && data.item == i)[0] || {};
-    data_lengkap = itemdata.lengkap || 0;
-    data_halaman = itemdata.halaman || "";
-    data_dokumen = itemdata.dokumen || "";
-    data_catatan = itemdata.catatan || "";
-    data_files_1 = itemdata.files_1 || "";
-    data_files_2 = itemdata.files_2 || "";
-    data_files_3 = itemdata.files_3 || "";
-    data_files_4 = itemdata.files_4 || "";
+    itemdata = $userdata.filter((data) => data.sub == sub && data.item == i.toString())[0] || false;
+    if (itemdata) {
+      data_lengkap = itemdata.lengkap;
+      data_halaman = itemdata.halaman;
+      data_dokumen = itemdata.dokumen;
+      data_catatan = itemdata.catatan;
+      data_files_1 = itemdata.files_1;
+      data_files_2 = itemdata.files_2;
+      data_files_3 = itemdata.files_3;
+      data_files_4 = itemdata.files_4;
+    }
   };
 
   let cancel = () => {
@@ -40,6 +42,7 @@
 
   let dosave = () => {
     let newdata = {
+      prodi: $auth.program_studi || "-",
       sub: sub,
       item: i,
       lengkap: data_lengkap,
@@ -54,6 +57,26 @@
     let olddata = $userdata.filter((data) => data.sub != sub || data.item != i);
     olddata.push(newdata);
     userdata.update(() => olddata);
+
+    fetch(API + "/data/create", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(newdata),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          console.log(data);
+        } else {
+          console.log(data);
+        }
+      })
+      .catch((res) => {
+        console.log(res);
+      });
   };
 
   let addlink = () => {
@@ -87,7 +110,7 @@
           type="radio"
           name={mclass("opt")}
           value="1"
-          checked={data_lengkap == 1 ? true : false} />Lengkap</label>
+          checked={data_lengkap == "1" ? true : false} bind:group={data_lengkap} />Lengkap</label>
     </div>
 
     <div class="form-check form-check-inline">
@@ -97,7 +120,7 @@
           type="radio"
           name={mclass("opt")}
           value="2"
-          checked={data_lengkap == 2 ? true : false} />Tidak Lengkap</label>
+          checked={data_lengkap == "2" ? true : false} bind:group={data_lengkap} />Tidak Lengkap</label>
     </div>
 
     <div class="form-check form-check-inline">
@@ -107,7 +130,7 @@
           type="radio"
           name={mclass("opt")}
           value="3"
-          checked={data_lengkap == 3 ? true : false} />Tidak Tersedia</label>
+          checked={data_lengkap == "3" ? true : false} bind:group={data_lengkap} />Tidak Tersedia</label>
     </div>
   </div>
   <div class="p-2">
@@ -159,28 +182,48 @@
         <div>
           <a href={data_files_1} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_1}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_1 = ""}} /></span>
+          <span style="margin-left:16px"
+            ><i
+              class="fa fa-trash"
+              on:click={() => {
+                data_files_1 = "";
+              }} /></span>
         </div>
       {/if}
       {#if data_files_2}
         <div>
           <a href={data_files_2} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_2}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_2 = ""}} /></span>
+          <span style="margin-left:16px"
+            ><i
+              class="fa fa-trash"
+              on:click={() => {
+                data_files_2 = "";
+              }} /></span>
         </div>
       {/if}
       {#if data_files_3}
         <div>
           <a href={data_files_3} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_3}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_3 = ""}} /></span>
+          <span style="margin-left:16px"
+            ><i
+              class="fa fa-trash"
+              on:click={() => {
+                data_files_3 = "";
+              }} /></span>
         </div>
       {/if}
       {#if data_files_4}
         <div>
           <a href={data_files_4} target="_blank"
             ><i class="fa fa-external-link-alt" />{data_files_4}</a>
-          <span style="margin-left:16px"><i class="fa fa-trash" on:click={() => {data_files_4 = ""}} /></span>
+          <span style="margin-left:16px"
+            ><i
+              class="fa fa-trash"
+              on:click={() => {
+                data_files_4 = "";
+              }} /></span>
         </div>
       {/if}
     </div>
