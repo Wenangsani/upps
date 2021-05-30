@@ -6,7 +6,9 @@
   export let hidden;
   export let closeform;
 
-  let itemdata = {};
+  let onsave =  false;
+  let saved  = false;
+
   let data_lengkap = 0;
   let data_halaman = "";
   let data_dokumen = "";
@@ -17,7 +19,7 @@
   let data_files_4 = "";
 
   let reset = () => {
-    itemdata = $userdata.filter((data) => data.sub == sub && data.item == i.toString())[0] || false;
+    let itemdata = $userdata.filter((data) => data.sub == sub && data.item == i.toString())[0] || false;
     if (itemdata) {
       data_lengkap = itemdata.lengkap;
       data_halaman = itemdata.halaman;
@@ -41,8 +43,10 @@
   let inupload = false;
 
   let dosave = () => {
+
+    onsave = true;
+
     let newdata = {
-      prodi: $auth.program_studi || "-",
       sub: sub,
       item: i,
       lengkap: data_lengkap,
@@ -61,6 +65,7 @@
     fetch(API + "/data/create", {
       headers: {
         Accept: "application/json",
+        Authorization: $auth.token,
         "Content-Type": "application/json",
       },
       method: "POST",
@@ -70,12 +75,18 @@
       .then((data) => {
         if (data.success) {
           console.log(data);
+          saved = true;
+          setTimeout(() => {
+            saved = false;
+          }, 5000);
         } else {
           console.log(data);
         }
+        onsave = false;
       })
       .catch((res) => {
         console.log(res);
+        onsave = false;
       });
   };
 
@@ -234,10 +245,21 @@
     <textarea class="form-control" bind:value={data_catatan} />
   </div>
 
+  {#if saved}
+  <div class="alert alert-success m-2" role="alert">
+    <i class="fa fa-check-double"/> Saved ...
+  </div>
+  {/if}
+
+
+  {#if onsave}
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  {:else}
   <div class="mb-4 p-2">
     <button
       on:click={() => {
-        closeform(i);
         dosave();
       }}
       class="btn btn-primary">
@@ -252,4 +274,6 @@
       <i class="fa fa-times" /> Cancel
     </button>
   </div>
+  {/if}
+
 </div>
