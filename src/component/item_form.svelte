@@ -6,8 +6,8 @@
   export let hidden;
   export let closeform;
 
-  let onsave =  false;
-  let saved  = false;
+  let onsave = false;
+  let saved = false;
 
   let data_lengkap = 0;
   let data_halaman = "";
@@ -19,7 +19,10 @@
   let data_files_4 = "";
 
   let reset = () => {
-    let itemdata = $userdata.filter((data) => data.sub == sub && data.item == i.toString())[0] || false;
+    let itemdata =
+      $userdata.filter(
+        (data) => data.sub == sub && data.item == i.toString()
+      )[0] || false;
     if (itemdata) {
       data_lengkap = itemdata.lengkap;
       data_halaman = itemdata.halaman;
@@ -43,7 +46,6 @@
   let inupload = false;
 
   let dosave = () => {
-
     onsave = true;
 
     let newdata = {
@@ -65,8 +67,8 @@
     fetch(API + "/data/create", {
       headers: {
         Accept: "application/json",
-        Authorization: $auth.token,
         "Content-Type": "application/json",
+        Authorization: $auth.token,
       },
       method: "POST",
       body: JSON.stringify(newdata),
@@ -90,8 +92,8 @@
       });
   };
 
-  let addlink = () => {
-    let link = prompt("Paste link disini ...");
+  let addlink = (link) => {
+    link = link || prompt("Paste link disini ...");
     if (link) {
       if (!data_files_1) {
         data_files_1 = link;
@@ -110,6 +112,36 @@
   let mclass = (pre) => {
     return `${pre}_${sub.replace(".", "__")}_${i}`;
   };
+
+  let file_upload = (event) => {
+    event.preventDefault();
+
+    const files = event.target.files;
+
+    inupload = true;
+    const data = new FormData();
+    data.append("userfile", files[0], files[0].name);
+
+    console.log(files[0]);
+
+    fetch(API + "/data/upload_file", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        Authorization: $auth.token,
+      },
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          addlink(API + "/uploads/" + data.data.file_name);
+        } else {
+          alert(data.content);
+        }
+        inupload = false;
+      });
+  };
 </script>
 
 <div class={hidden === false ? "d-block mt-4" : "d-none"}>
@@ -121,7 +153,8 @@
           type="radio"
           name={mclass("opt")}
           value="1"
-          checked={data_lengkap == "1" ? true : false} bind:group={data_lengkap} />Lengkap</label>
+          checked={data_lengkap == "1" ? true : false}
+          bind:group={data_lengkap} />Lengkap</label>
     </div>
 
     <div class="form-check form-check-inline">
@@ -131,7 +164,8 @@
           type="radio"
           name={mclass("opt")}
           value="2"
-          checked={data_lengkap == "2" ? true : false} bind:group={data_lengkap} />Tidak Lengkap</label>
+          checked={data_lengkap == "2" ? true : false}
+          bind:group={data_lengkap} />Tidak Lengkap</label>
     </div>
 
     <div class="form-check form-check-inline">
@@ -141,7 +175,8 @@
           type="radio"
           name={mclass("opt")}
           value="3"
-          checked={data_lengkap == "3" ? true : false} bind:group={data_lengkap} />Tidak Tersedia</label>
+          checked={data_lengkap == "3" ? true : false}
+          bind:group={data_lengkap} />Tidak Tersedia</label>
     </div>
   </div>
   <div class="p-2">
@@ -179,9 +214,7 @@
           type="file"
           id={mclass("file")}
           style="display:none"
-          on:change={() => {
-            inupload = true;
-          }} />
+          on:change={file_upload} />
         <button on:click={() => addlink()} class="btn btn-light">
           <i class="fa fa-link" /> Link
         </button>
@@ -246,34 +279,32 @@
   </div>
 
   {#if saved}
-  <div class="alert alert-success m-2" role="alert">
-    <i class="fa fa-check-double"/> Saved ...
-  </div>
+    <div class="alert alert-success m-2" role="alert">
+      <i class="fa fa-check-double" /> Saved ...
+    </div>
   {/if}
-
 
   {#if onsave}
-  <div class="spinner-border text-primary" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   {:else}
-  <div class="mb-4 p-2">
-    <button
-      on:click={() => {
-        dosave();
-      }}
-      class="btn btn-primary">
-      <i class="fa fa-check" /> Save
-    </button>
-    <button
-      on:click={() => {
-        closeform(i);
-        cancel();
-      }}
-      class="btn btn-light">
-      <i class="fa fa-times" /> Cancel
-    </button>
-  </div>
+    <div class="mb-4 p-2">
+      <button
+        on:click={() => {
+          dosave();
+        }}
+        class="btn btn-primary">
+        <i class="fa fa-check" /> Save
+      </button>
+      <button
+        on:click={() => {
+          closeform(i);
+          cancel();
+        }}
+        class="btn btn-light">
+        <i class="fa fa-times" /> Cancel
+      </button>
+    </div>
   {/if}
-
 </div>

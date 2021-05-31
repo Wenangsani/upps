@@ -2,7 +2,8 @@
   import { auth, active_sub } from "../store";
   import { link, navigate } from "svelte-routing";
 
-  let usermenu_active, kriteriamenu_active = false;
+  let usermenu_active,
+    kriteriamenu_active = false;
   let kriterias = [
     "1 » VISI, MISI, TUJUAN DAN STRATEGI",
     "2 » TATA PAMONG DAN TATA KELOLA",
@@ -12,8 +13,10 @@
     "6 » KURIKULUM",
     "7 » PENELITIAN",
     "8 » PENGABDIAN KEPADA MASYARAKAT",
-    "9 » LUARAN DAN CAPAIAN TRIDHARMA"
+    "9 » LUARAN DAN CAPAIAN TRIDHARMA",
   ];
+
+  let ondownload = false;
 
   let logout = () => {
     window.localStorage.removeItem("auth");
@@ -23,6 +26,92 @@
 
   let change_criteria = (i) => {
     active_sub.update(() => i + 1);
+  };
+
+  let s2ab = (s) => {
+    let buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
+    let view = new Uint8Array(buf); //create uint8array as viewer
+    for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff; //convert to octet
+    return buf;
+  };
+
+  let compare = ( a, b ) => {
+    if ( parseFloat(a.sub) < parseFloat(b.sub) ){
+      return -1;
+    }
+    if ( parseFloat(a.sub) > parseFloat(b.sub) ){
+      return 1;
+    }
+    if ( parseFloat(a.item) < parseFloat(b.item) ){
+      return -1;
+    }
+    if ( parseFloat(a.item) > parseFloat(b.item) ){
+      return 1;
+    }
+    return 0;
+  };
+
+  let export_excel = () => {
+    ondownload = true;
+    fetch(API + "/data/read/" + ($auth.program_studi || "-"), {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: $auth.token,
+      },
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          let datas = data.data;
+          datas = datas.sort(compare);
+          let columns = Object.keys(datas[0]);
+          let exceldata = [];
+          exceldata.push(columns);
+          for (var row of datas) {
+            var itemdata = [];
+            for (var column of columns) {
+              itemdata.push(row[column]);
+            }
+            exceldata.push(itemdata);
+          }
+          console.log(exceldata);
+          save_excel(exceldata);
+        } else {
+          console.log(data);
+          ondownload = false;
+        }
+      })
+      .catch((res) => {
+        console.log(res);
+        ondownload = false;
+      });
+  };
+
+  let save_excel = (ws_data) => {
+    let wb = XLSX.utils.book_new();
+    wb.Props = {
+      Title: "UPPS DATA",
+      Subject: "UPPS DATA",
+      Author: "FKIP UNRAM",
+      CreatedDate: new Date(),
+    };
+    wb.SheetNames.push("UPPS DATA");
+
+    // let ws_data = [["hello", "world"]];
+
+    let ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+    wb.Sheets["UPPS DATA"] = ws;
+
+    let wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
+
+    saveAs(
+      new Blob([s2ab(wbout)], { type: "application/octet-stream" }),
+      "upps_fkip_unram.xlsx"
+    );
+    ondownload = false;
   };
 </script>
 
@@ -49,19 +138,33 @@
               on:click={() => {
                 kriteriamenu_active = !kriteriamenu_active;
               }}>
-              <i class="fa fa-list-alt"></i> KRITERIA
+              <i class="fa fa-list-alt" /> KRITERIA
             </a>
-            <ul class={kriteriamenu_active ? "dropdown-menu show" : "dropdown-menu"}>
+            <ul
+              class={kriteriamenu_active
+                ? "dropdown-menu show"
+                : "dropdown-menu"}>
               {#each kriterias as kriteria, i}
                 <li>
-                  <a href="#!" on:click={() => change_criteria(i)} class={$active_sub == i + 1 ? "dropdown-item active" : "dropdown-item"}>{kriteria}</a>
+                  <a
+                    href="#!"
+                    on:click={() => change_criteria(i)}
+                    class={$active_sub == i + 1
+                      ? "dropdown-item active"
+                      : "dropdown-item"}>{kriteria}</a>
                 </li>
               {/each}
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#!" class="nav-link">
-              <i class="fa fa-download"></i> EXPORT
+            <a href="#!" on:click={export_excel} class="nav-link">
+              {#if ondownload}
+                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              {:else}
+                <i class="fa fa-download" /> EXPORT
+              {/if}
             </a>
           </li>
         {/if}

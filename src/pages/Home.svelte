@@ -17,8 +17,9 @@
     } else {
       fetch(API + "/data/read/" + ($auth.program_studi || "-"), {
         headers: {
-          Accept: "application/json",
+          "Accept": "application/json",
           "Content-Type": "application/json",
+          "Authorization": $auth.token
         },
         method: "GET",
       })
