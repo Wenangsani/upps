@@ -6,8 +6,9 @@
   import Navbar from "../component/navbar.svelte";
   import Item from "../component/item.svelte";
   import Menu1 from "../datas/menu_1";
+  import Menu2 from "../datas/menu_2";
 
-  let menus = Menu1;
+  let menus = Menu2;
   let hasdata = false;
 
   onMount(async () => {

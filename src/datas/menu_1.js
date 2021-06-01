@@ -27,16 +27,13 @@ export default [
         Name: "Instrumen valid yang digunakan",
       },
       {
-        Name:
-          "Pihak eksternal yang dilibatkan (Jumlah, asal responden, kriteria)",
+        Name: "Pihak eksternal yang dilibatkan (Jumlah, asal responden, kriteria)",
       },
       {
-        Name:
-          "Pihak internal yang dilibatkan (Jumlah, asal responden, kriteria)",
+        Name: "Pihak internal yang dilibatkan (Jumlah, asal responden, kriteria)",
       },
       {
-        Name:
-          "Laporan Lengkap (Mencakup Semua aspek di atas dan hasil analisa)",
+        Name: "Laporan Lengkap (Mencakup Semua aspek di atas dan hasil analisa)",
       },
     ],
     Catatan: [
@@ -50,8 +47,7 @@ export default [
     Auditee: "Dekan, Direktur, Koordinator Prodi di bawah Rektor",
     Dokumen: [
       {
-        Name:
-          "Bukti tindak lanjut dalam rapat tinjauan managemen : Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM",
+        Name: "Bukti tindak lanjut dalam rapat tinjauan managemen : Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM",
       },
     ],
     Catatan: [
@@ -75,15 +71,13 @@ export default [
         Name: "SK Struktur Organisasi ",
       },
       {
-        Name:
-          "SK Tupoksi Struktur Organisasi (dapat menyatu dalam SK Struktur Organisasi)",
+        Name: "SK Tupoksi Struktur Organisasi (dapat menyatu dalam SK Struktur Organisasi)",
       },
       {
         Name: "SK perubahan nama (Jika ada)",
       },
       {
-        Name:
-          "Bukti Sosialisasi sejarah ke pihak internal dan eksternal (WEB, buku-buku internal yang dapat diakses secara umum, kegiatan sosialisasi, selebaran/leaflet dll)   Tersedia laporan 3 tahun terakhir (2017-2019)",
+        Name: "Bukti Sosialisasi sejarah ke pihak internal dan eksternal (WEB, buku-buku internal yang dapat diakses secara umum, kegiatan sosialisasi, selebaran/leaflet dll)   Tersedia laporan 3 tahun terakhir (2017-2019)",
       },
     ],
     Catatan: ["Dokumen bukti sosialisasi setiap tahun dijadikan 1 berkas"],
@@ -101,24 +95,19 @@ export default [
         Name: "SOP Penyusunan",
       },
       {
-        Name:
-          "Bukti kinerja tim: Undangan, absen, notulensi, gambar, draf yang dihasilkan  ",
+        Name: "Bukti kinerja tim: Undangan, absen, notulensi, gambar, draf yang dihasilkan  ",
       },
       {
-        Name:
-          "Bukti Lokakarya: Undangan, absen, notulensi, gambar, pihak stakeholders internal dan eksteral yang dilibatkan, draf hasil lokakarya: VMTS dan tata nilai, indikator utama dan tambahan dan jika ada, defenisi operasional pernyataan dalam VMTS",
+        Name: "Bukti Lokakarya: Undangan, absen, notulensi, gambar, pihak stakeholders internal dan eksteral yang dilibatkan, draf hasil lokakarya: VMTS dan tata nilai, indikator utama dan tambahan dan jika ada, defenisi operasional pernyataan dalam VMTS",
       },
       {
-        Name:
-          "Bukti Pelaksanaan Rapat Kerja dengan agenda membahas VMTS dan tata nilai: Undangan, absen, notulensi, gambar, draf  hasil RKU/RKF: VMTS dan tata nilai, Indikator dan jika ada defenisi operasional",
+        Name: "Bukti Pelaksanaan Rapat Kerja dengan agenda membahas VMTS dan tata nilai: Undangan, absen, notulensi, gambar, draf  hasil RKU/RKF: VMTS dan tata nilai, Indikator dan jika ada defenisi operasional",
       },
       {
-        Name:
-          "Bukti Pelaksanaan Rapat senat dengan agenda membahas VMTS dan tata nilai: Undangan, absen, notulensi, gambar, naskah VMTS dan tata nilai, indikator dan defenisi operasional yang disetujui senat",
+        Name: "Bukti Pelaksanaan Rapat senat dengan agenda membahas VMTS dan tata nilai: Undangan, absen, notulensi, gambar, naskah VMTS dan tata nilai, indikator dan defenisi operasional yang disetujui senat",
       },
       {
-        Name:
-          "SK Pengesahan VMTS dan Tata nilai yang dilengkapi dengan indikator dan defenisi operasional (jika ada)",
+        Name: "SK Pengesahan VMTS dan Tata nilai yang dilengkapi dengan indikator dan defenisi operasional (jika ada)",
       },
     ],
     Catatan: ["Dokumen bukti Penyusunan  dijadikan 1 berkas"],
@@ -130,12 +119,10 @@ export default [
       "Dekan, Direktur, Koordinator Prodi di bawah Rektor, Ketua Prodi di bawah Rektor",
     Dokumen: [
       {
-        Name:
-          "SK /Surat Tugas tim pelaksana atau SK tupoksi Unit dalam organisasi yang mempunyai tugas melaksanakan sosialisasi",
+        Name: "SK /Surat Tugas tim pelaksana atau SK tupoksi Unit dalam organisasi yang mempunyai tugas melaksanakan sosialisasi",
       },
       {
-        Name:
-          "SOP Sosialisasi VMTS dan tata nilai, media dan metode sosiliasisasi yang digunakan, laporan sosialisasi setiap tahun",
+        Name: "SOP Sosialisasi VMTS dan tata nilai, media dan metode sosiliasisasi yang digunakan, laporan sosialisasi setiap tahun",
       },
     ],
     Catatan: ["Dokumen bukti sosialisasi setiap tahun dijadikan 1 berkas  "],
@@ -146,8 +133,7 @@ export default [
     Auditee: "Dekan, Direktur, Koordinator Prodi di bawah Rektor, GPM",
     Dokumen: [
       {
-        Name:
-          "SK /Surat Tugas tim pelaksana atau SK tupoksi Unit dalam organisasi yang mempunyai tugas melaksanakan evaluasi pemahaman dan pencapaian indikator",
+        Name: "SK /Surat Tugas tim pelaksana atau SK tupoksi Unit dalam organisasi yang mempunyai tugas melaksanakan evaluasi pemahaman dan pencapaian indikator",
       },
       {
         Name: "SOP Evaluasi Pemahaman VMTS dan tata nila",
@@ -159,16 +145,13 @@ export default [
         Name: "Instrumen evaluasi pemahaman VMTS dan tata nilai yang valid",
       },
       {
-        Name:
-          "Instrumen evaluasi pencapaian indikator VMTS dan tata nilai yang valid ",
+        Name: "Instrumen evaluasi pencapaian indikator VMTS dan tata nilai yang valid ",
       },
       {
-        Name:
-          "Laporan evaluasi Pemahaman Visi, misi, tujuan, strategi, dan tata nilai (dijadikan  1 berkas bersama dengan SK, SOP dan Instrumen)",
+        Name: "Laporan evaluasi Pemahaman Visi, misi, tujuan, strategi, dan tata nilai (dijadikan  1 berkas bersama dengan SK, SOP dan Instrumen)",
       },
       {
-        Name:
-          "Laporan evaluasi Pencapaian indikator Visi, misi, tujuan, strategi, dan tata nilai (dijadikan  1 berkas bersama dengan SK, SOP dan Instrumen)",
+        Name: "Laporan evaluasi Pencapaian indikator Visi, misi, tujuan, strategi, dan tata nilai (dijadikan  1 berkas bersama dengan SK, SOP dan Instrumen)",
       },
     ],
     Catatan: [
@@ -183,8 +166,7 @@ export default [
     Auditee: "Dekan, Direktur, Koordinator PS di bawah Rektor",
     Dokumen: [
       {
-        Name:
-          "Bukti tindak lanjut laporan hasil evaluasi pemahaman dan pencapaian indikator VMTS dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RKF.",
+        Name: "Bukti tindak lanjut laporan hasil evaluasi pemahaman dan pencapaian indikator VMTS dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RKF.",
       },
     ],
     Catatan: [
@@ -210,8 +192,7 @@ export default [
         Name: "Renop yang memiliki legalitas formal",
       },
       {
-        Name:
-          "Dokumen perencanaan dan implementasi visi, misi, tujuan dan sasaran yang lain",
+        Name: "Dokumen perencanaan dan implementasi visi, misi, tujuan dan sasaran yang lain",
       },
       {
         Name: "Pedoman Akademik yang memiliki legalitas formal",
@@ -223,12 +204,10 @@ export default [
         Name: "Rencana Induk penelitian yang memiliki legalitas formal",
       },
       {
-        Name:
-          "Rencana induk pengabdian kepada masyarakat yang memiliki legalitas formal",
+        Name: "Rencana induk pengabdian kepada masyarakat yang memiliki legalitas formal",
       },
       {
-        Name:
-          "Dokumen penjaminan mutu, manual SPMI, standar SPMI dan formulir mutu (termasuk di dalamnya SOP dan IK), pedoman AMI, pedoman evaluasi diri (format dan isi yg harus ada)",
+        Name: "Dokumen penjaminan mutu, manual SPMI, standar SPMI dan formulir mutu (termasuk di dalamnya SOP dan IK), pedoman AMI, pedoman evaluasi diri (format dan isi yg harus ada)",
       },
     ],
     Catatan: [],
@@ -240,8 +219,7 @@ export default [
       "Dekan/Direktur, Koordinator Prodi di bawah Rektor, Semua Wakil Dekan/Direktur, Ka Prodi di bwah Rektor",
     Dokumen: [
       {
-        Name:
-          "SK Tim sosialisasi dokumen RPJP, Renstra, Renop, RIP, RIPengmas, Kurikulum,  Pedoman akademik, Kebijakan SPMI, Manual SPMI, Standar SPMI, Formulir SPMI, Pedoman AMI, Pedoman Evaluasi Diri",
+        Name: "SK Tim sosialisasi dokumen RPJP, Renstra, Renop, RIP, RIPengmas, Kurikulum,  Pedoman akademik, Kebijakan SPMI, Manual SPMI, Standar SPMI, Formulir SPMI, Pedoman AMI, Pedoman Evaluasi Diri",
       },
       {
         Name: "SOP sosialisasi",
@@ -250,8 +228,7 @@ export default [
         Name: "Media dan metode sosialisasi",
       },
       {
-        Name:
-          "Laporan sosialisasi (dijadikan  1 berkas bersama dengan SK, SOP dan metode)",
+        Name: "Laporan sosialisasi (dijadikan  1 berkas bersama dengan SK, SOP dan metode)",
       },
     ],
     Catatan: [
@@ -285,16 +262,13 @@ export default [
         Name: "Instrumen yang digunakan",
       },
       {
-        Name:
-          "Laporan evaluasi diri (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+        Name: "Laporan evaluasi diri (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
       },
       {
-        Name:
-          "Laporan evaluasi pencapaian indikator Renstra dan Renop (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+        Name: "Laporan evaluasi pencapaian indikator Renstra dan Renop (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
       },
       {
-        Name:
-          "LAKIP (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
+        Name: "LAKIP (dijadikan 1 berkas bersama dengan SK, SOP, Instrumen, dll)",
       },
     ],
     Catatan: [
@@ -309,8 +283,7 @@ export default [
     Auditee: "Dekan. Direktur, Koordinator PS di bawah Rektor",
     Dokumen: [
       {
-        Name:
-          "Bukti tindak lanjut laporan hasil evaluasi diri, pencapaian indkator Resntra dan Renop, Lakip dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM.",
+        Name: "Bukti tindak lanjut laporan hasil evaluasi diri, pencapaian indkator Resntra dan Renop, Lakip dalam rapat tinjauan managemen: Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM.",
       },
     ],
     Catatan: [

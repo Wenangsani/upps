@@ -27,20 +27,26 @@
 <ul class="list-group" style="margin-bottom:4rem">
   <!-- Informasi -->
   <li class="list-group-item">
-    <h5 class="text-dark fw-bold">{menu.No} » {menu.Lingkup}</h5>
-    <div class="alert alert-secondary my-3 p-2">
-      Catatan :
-      <ul>
-        {#each menu.Catatan as cat}
-          <li>{cat}</li>
-        {/each}
-      </ul>
-      <div>Auditee : {menu.Auditee}</div>
-    </div>
+    <h4 class="text-dark fw-bold">{menu.No} » {menu.Lingkup}</h4>
+    <br/>
+    <div>Auditee: {menu.Auditee}</div>
+    {#if menu.Catatan.length > 0}
+      <div class="my-2">
+        Catatan:
+        <ul>
+          {#each menu.Catatan as cat}
+            <li>{cat}</li>
+          {/each}
+        </ul>
+      </div>
+    {/if}
   </li>
   <!-- Name list-->
   {#each menu.Dokumen as { Name, hidden }, i}
-    <li class={hidden === false ? "list-group-item bg-formactive" : "list-group-item"}>
+    <li
+      class={hidden === false
+        ? "list-group-item bg-formactive"
+        : "list-group-item"}>
       <h6 on:click={() => openform(i)} style="cursor:pointer">
         {i + 1}. {Name}
       </h6>
