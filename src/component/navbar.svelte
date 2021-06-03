@@ -1,9 +1,9 @@
 <script>
-  import { auth, active_sub } from "../store";
+  import { auth, active_kriteria, active_lingkup } from "../store";
   import { link, navigate } from "svelte-routing";
 
-  let usermenu_active,
-    kriteriamenu_active = false;
+  let usermenu_active, kriteriamenu_active = false;
+
   let kriterias = [
     "1 » VISI, MISI, TUJUAN DAN STRATEGI",
     "2 » TATA PAMONG DAN TATA KELOLA",
@@ -25,7 +25,8 @@
   };
 
   let change_criteria = (i) => {
-    active_sub.update(() => i + 1);
+    active_kriteria.update(() => i + 1);
+    active_lingkup.update(() => 1);
   };
 
   let s2ab = (s) => {
@@ -149,7 +150,7 @@
                   <a
                     href="#!"
                     on:click={() => change_criteria(i)}
-                    class={$active_sub == i + 1
+                    class={$active_kriteria == i + 1
                       ? "dropdown-item active"
                       : "dropdown-item"}>{kriteria}</a>
                 </li>
