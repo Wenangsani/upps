@@ -165,12 +165,14 @@
 
     let fix_data = new_datas.map(data => {
       if (data.same_kriteria == 1) {
-        data.same_kriteria = "";
+        data.kriteria = "";
       }
       if (data.same_no == 1) {
         data.no            = "";
         data.lingkup_audit = "";
       }
+      delete data.same_kriteria;
+      delete data.same_no;
       return data;
     });
 
@@ -228,6 +230,14 @@
     // let ws_data = [["hello", "world"]];
 
     let ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+    /*
+    // contoh merge s = start, e = end, r = row, c = column
+    const merge = [
+      { s: { r: 1, c: 0 }, e: { r: 2, c: 0 } },
+    ];
+    ws["!merges"] = merge;
+    */
 
     wb.Sheets["UPPS DATA"] = ws;
 

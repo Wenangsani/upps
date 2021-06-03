@@ -15,12 +15,15 @@
 
   let openform = (i) => {
     closeall();
-
     if (typeof menu.Dokumen[i].hidden === "undefined") {
       menu.Dokumen[i].hidden = false;
     } else if (menu.Dokumen[i].hidden === true) {
       menu.Dokumen[i].hidden = false;
     }
+  };
+
+  let set_lengkap = (i) => {
+    menu.Dokumen[i - 1].lengkap = true;
   };
 </script>
 
@@ -42,15 +45,20 @@
     {/if}
   </li>
   <!-- Name list-->
-  {#each menu.Dokumen as { Name, hidden }, i}
+  {#each menu.Dokumen as { Name, hidden, lengkap }, i}
     <li
       class={hidden === false
         ? "list-group-item bg-formactive"
         : "list-group-item"}>
+        <span class="float-end">
+          {#if lengkap}
+            <i class="fa fa-check-double text-success"/>
+          {/if}
+        </span>
       <h6 on:click={() => openform(i)} style="cursor:pointer">
         {i + 1}. {Name}
       </h6>
-      <ItemForm sub={menu.No} i={i + 1} {hidden} {closeform} />
+      <ItemForm sub={menu.No} i={i + 1} {hidden} {closeform} {set_lengkap}/>
     </li>
   {/each}
 </ul>

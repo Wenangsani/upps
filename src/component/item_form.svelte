@@ -5,11 +5,12 @@
   export let i;
   export let hidden;
   export let closeform;
+  export let set_lengkap;
 
   let onsave = false;
   let saved = false;
 
-  let data_lengkap = 0;
+  let data_lengkap = "0";
   let data_halaman = "";
   let data_dokumen = "";
   let data_catatan = "";
@@ -32,6 +33,9 @@
       data_files_2 = itemdata.files_2;
       data_files_3 = itemdata.files_3;
       data_files_4 = itemdata.files_4;
+    }
+    if (data_lengkap == "1") {
+      set_lengkap(i);
     }
   };
 
@@ -64,6 +68,9 @@
     let olddata = $userdata.filter((data) => data.sub != sub || data.item != i);
     olddata.push(newdata);
     userdata.update(() => olddata);
+    if (data_lengkap == "1") {
+      set_lengkap(i);
+    }
 
     fetch(API + "/data/create", {
       headers: {
@@ -194,7 +201,7 @@
     </div>
   </div>
   <div class="p-2">
-    <div>Files</div>
+    <div>File</div>
     <div class="my-2">
       {#if inupload}
         <div
@@ -222,7 +229,7 @@
       {/if}
     </div>
 
-    <div class="my-2 mt-4">
+    <div class="my-2">
       {#if data_files_1}
         <div>
           <a href={data_files_1} target="_blank"
@@ -304,7 +311,7 @@
           cancel();
         }}
         class="btn btn-light">
-        <i class="fa fa-times" /> Cancel
+        <i class="fa fa-times" /> Close
       </button>
     </div>
   {/if}
