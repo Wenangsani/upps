@@ -7,6 +7,7 @@
   import Item from "../component/item.svelte";
   import Menu1 from "../datas/menu_1";
   import Menu2 from "../datas/menu_2";
+  import Menu3 from "../datas/menu_3";
 
   let menus = Menu1;
   let hasdata = false;

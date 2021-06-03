@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { auth, userdata } from "../store";
+  import { auth, userdata, active_kriteria } from "../store";
   export let sub;
   export let i;
   export let hidden;
@@ -49,6 +49,7 @@
     onsave = true;
 
     let newdata = {
+      kriteria: $active_kriteria,
       sub: sub,
       item: i,
       lengkap: data_lengkap,

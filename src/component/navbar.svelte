@@ -1,6 +1,9 @@
 <script>
   import { auth, active_kriteria, active_lingkup } from "../store";
   import { link, navigate } from "svelte-routing";
+  import Menu1 from "../datas/menu_1";
+  import Menu2 from "../datas/menu_2";
+  import Menu3 from "../datas/menu_3";
 
   let usermenu_active, kriteriamenu_active = false;
 
@@ -27,6 +30,9 @@
   let change_criteria = (i) => {
     active_kriteria.update(() => i + 1);
     active_lingkup.update(() => 1);
+    setTimeout(() => {
+      kriteriamenu_active = false;
+    }, 2000);
   };
 
   let s2ab = (s) => {
@@ -52,6 +58,60 @@
     return 0;
   };
 
+  let get_item_data = (i) => {
+    switch($active_kriteria) {
+      case 1:
+        return Menu1;
+      break;
+      case 2:
+        return Menu2;
+      break;
+      case 3:
+        return Menu3;
+      break;
+    }
+  }; 
+
+  let repair_excel_data = (datas) => {
+    return datas.map(data => {
+
+      let menus = get_item_data(data.kriteria);
+
+      let item_data = menus.filter(i => i.No == data.sub)[0];
+
+      data.nama_dokumen  = data.dokumen;
+      data.lingkup_audit = item_data.Lingkup;
+      data.auditee       = item_data.Auditee;
+      data.dokumen       = item_data.Dokumen[parseInt(data.item) + 1].Name;
+      
+      let lengkap = JSON.parse(JSON.stringify(data.lengkap));
+
+      data.lengkap        = "";
+      data.tidak_lengkap  = "";
+      data.tidak_tersedia = "";
+
+      switch (lengkap) {
+        case "1":
+          data.lengkap = "✓";
+        break;
+        case "2":
+          data.tidak_lengkap = "✓";
+        break;
+        case "3":
+          data.tidak_tersedia = "✓";
+        break;
+      }
+
+      delete data.id;
+      delete data.kriteria;
+      delete data.sub;
+      delete data.item;
+      delete data.prodi;
+
+      return data;
+    })
+  };
+
   let export_excel = () => {
     ondownload = true;
     fetch(API + "/data/read/" + ($auth.program_studi || "-"), {
@@ -65,7 +125,7 @@
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          let datas = data.data;
+          let datas = repair_excel_data(data.data);
           datas = datas.sort(compare);
           let columns = Object.keys(datas[0]);
           let exceldata = [];
