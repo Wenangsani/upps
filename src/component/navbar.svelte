@@ -43,6 +43,12 @@
   };
 
   let compare = ( a, b ) => {
+    if ( parseFloat(a.kriteria) < parseFloat(b.kriteria) ){
+      return -1;
+    }
+    if ( parseFloat(a.kriteria) > parseFloat(b.kriteria) ){
+      return 1;
+    }
     if ( parseFloat(a.sub) < parseFloat(b.sub) ){
       return -1;
     }
@@ -59,14 +65,14 @@
   };
 
   let get_item_data = (i) => {
-    switch($active_kriteria) {
-      case 1:
+    switch(i) {
+      case "1":
         return Menu1;
       break;
-      case 2:
+      case "2":
         return Menu2;
       break;
-      case 3:
+      case "3":
         return Menu3;
       break;
     }
@@ -79,10 +85,13 @@
 
       let item_data = menus.filter(i => i.No == data.sub)[0];
 
+      console.log("data :", data);
+      console.log("item_data :", item_data);
+
       data.nama_dokumen  = data.dokumen;
       data.lingkup_audit = item_data.Lingkup;
       data.auditee       = item_data.Auditee;
-      data.dokumen       = item_data.Dokumen[parseInt(data.item) + 1].Name;
+      data.dokumen       = item_data.Dokumen[parseInt(data.item) - 1].Name;
       
       let lengkap = JSON.parse(JSON.stringify(data.lengkap));
 
@@ -102,14 +111,70 @@
         break;
       }
 
+      let newdata = {};
+
+      newdata.kriteria       = data.kriteria;
+      newdata.no             = data.sub;
+      newdata.lingkup_audit  = data.lingkup_audit;
+      newdata.lingkup_audit  = data.lingkup_audit;
+      newdata.auditee        = data.auditee;
+      newdata.dokumen        = data.dokumen;
+      newdata.tidak_tersedia = data.tidak_tersedia;
+      newdata.lengkap        = data.lengkap;
+      newdata.tidak_lengkap  = data.tidak_lengkap;
+      newdata.nama_dokumen   = data.nama_dokumen;
+      newdata.halaman        = data.halaman;
+      newdata.dokumen_1      = data.files_1;
+      newdata.dokumen_2      = data.files_2;
+      newdata.dokumen_3      = data.files_3;
+      newdata.dokumen_4      = data.files_4;
+      newdata.catatan        = data.catatan;
+
+      /*
       delete data.id;
       delete data.kriteria;
       delete data.sub;
       delete data.item;
       delete data.prodi;
+      */
 
-      return data;
+      return newdata;
     })
+  };
+
+  let remove_unused_data = (datas) => {
+    let new_datas = [];
+    for (var i in datas) {
+
+      let data_prev = datas[i - 1];
+      let data_now  = datas[i];
+
+      data_now.same_kriteria = "";
+      data_now.same_no       = "";
+
+      if (typeof data_prev !== "undefined") {
+        if (data_now.kriteria == data_prev.kriteria) {
+          data_now.same_kriteria = 1;
+        }
+        if (data_now.no == data_prev.no) {
+          data_now.same_no = 1;
+        } 
+      }
+      new_datas.push(data_now);
+    }
+
+    let fix_data = new_datas.map(data => {
+      if (data.same_kriteria == 1) {
+        data.same_kriteria = "";
+      }
+      if (data.same_no == 1) {
+        data.no            = "";
+        data.lingkup_audit = "";
+      }
+      return data;
+    });
+
+    return fix_data;
   };
 
   let export_excel = () => {
@@ -126,7 +191,7 @@
       .then((data) => {
         if (data.success) {
           let datas = repair_excel_data(data.data);
-          datas = datas.sort(compare);
+          datas = remove_unused_data(datas.sort(compare));
           let columns = Object.keys(datas[0]);
           let exceldata = [];
           exceldata.push(columns);
