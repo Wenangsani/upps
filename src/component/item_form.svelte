@@ -22,7 +22,7 @@
   let reset = () => {
     let itemdata =
       $userdata.filter(
-        (data) => data.sub == sub && data.item == i.toString()
+        (data) => data.kriteria == $active_kriteria && data.sub == sub && data.item == i.toString()
       )[0] || false;
     if (itemdata) {
       data_lengkap = itemdata.lengkap;
