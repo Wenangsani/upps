@@ -190,4 +190,327 @@ export default [
       "Dokumen bukti setiap tahun dijadikan 1 berkas",
     ],
   },
+  {
+    No: "11",
+    Lingkup: "Data Penelitian Dosen Tetap",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Rekapitulasi Data Penelitian dosen tetap dari berbagai sumber anggaran beserta besaran anggaran (3 tahun terakhir)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "12",
+    Lingkup: "Data Penelitian Dosen tidak tetap",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Rekapitulasi Data Penelitian dosen tidak tetap dari berbagai sumber anggaran beserta besaran anggaran (3 tahun terakhir)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "13",
+    Lingkup: "Data Publikasi Penelitian Dosen Tetap",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Rekapitulasi Data Publikasi Penelitian dosen tetap (nama dosen, judul publikasi, nama jurnal/seminra, kriteria Jurnal/seminar (3 tahun terakhir)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "14",
+    Lingkup: "Data Publikasi Penelitian Dosen tidak Tetap",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Rekapitulasi Data Publikasi Penelitian dosen tidak tetap (nama dosen, judul publikasi, nama jurnal/seminar, kriteria Jurnal/seminar (3 tahun terakhir)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "15",
+    Lingkup:
+      "Penelitian dosen yang melibatkan mahasiswa (judul penelitian dosen, nama mahasiswa, judul penelitian mahasiswa)",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Umum dan Keuangan, Kasubag Keuangan dan Umum, Koordinator Prodi bawah Rektor, Ka PS",
+    Dokumen: [
+      {
+        Name: "Rekapitulaasi / Data Penelitian dosen yang melibatkan mahasiswa (judul penelitian dosen, nama mahasiswa, judul penelitian mahasiswa)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+      "Dapat diisi sesuai tabel BAN PT",
+    ],
+  },
+  {
+    No: "16",
+    Lingkup: "Evaluasi Kepuasan Pengguna",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "17",
+    Lingkup: "Evaluasi Standar Mutu Penelitian",
+    Auditee: "BP3F, GPM",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi Pencapaian indikator Standar SPMI Penelitian dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "18",
+    Lingkup: "Evaluasi RIP",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi Pencapaian indikator Rencana Induk Penelitian dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "19",
+    Lingkup: "Evaluasi Renstra Pilar Penelitian",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi pencapaian indikator Renstra UPPS bidang penelitian dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "20",
+    Lingkup: "Evaluasi Renop Pilar Penelitian",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi pencapaian indikator Renop UPPS bidang penelitian dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "21",
+    Lingkup: "Evaluasi Program Kerja UPPS dan BP3F terkait penelitian",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi Program Kerja BP3F dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "22",
+    Lingkup:
+      "Evaluasi Kesesuaian topik penelitian  dengan VMTS dan road map penelitian/ RIP",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi Kesesuaian Topik Penelitian dengan VMTS dan road map/RIP UPPS  dalam 3 tahun terakhir / 2017-2019",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap ",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "23",
+    Lingkup: "AIM Bidang Penelitian (jika ada)",
+    Auditee: "BP3F, GPM",
+    Dokumen: [
+      {
+        Name: "Laporan Lengkap AIM bidang Penelitian dalam 3 tahun terakhir",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "24",
+    Lingkup: "Tindak Lanjut",
+    Auditee: "Dekan/Direktur/Koordinator PS Bawah Rektor",
+    Dokumen: [
+      {
+        Name: "Bukti tindak lanjut dalam rapat tinjauan managemen terkait hasil evaluasi dan AIM bidang Penelitian : Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM (minimal tahun 2017-2019)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
 ];
