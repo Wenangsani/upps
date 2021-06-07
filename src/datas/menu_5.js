@@ -6,7 +6,7 @@ export default [
       "Koordinator PS di bawah Rektor, Wakil Dekan/Direktur Bidang Umum dan Keuangan, Ka TU, GPM",
     Dokumen: [
       {
-        Name: "Standar SPMI erkait Sarana dan Prasarana Pendidikan yang memiliki legalitas formal",
+        Name: "Standar SPMI terkait Sarana dan Prasarana Pendidikan yang memiliki legalitas formal",
       },
       {
         Name: "Standar SPMI terkait Sarana dan Prasarana Penelitian dan Pengabdian kepada masyarakat  yang memiliki legalitas formal",
@@ -303,7 +303,7 @@ export default [
   },
   {
     No: "13",
-    Lingkup: "Tindaklanjut",
+    Lingkup: "Tindak Lanjut",
     Auditee: "Dekan/Direktur/Koordinator PS Bawah Rektor",
     Dokumen: [
       {

@@ -21,10 +21,17 @@
 
   let reset = () => {
     let itemdata =
-      $userdata.filter(
-        (data) => data.kriteria == $active_kriteria && data.sub == sub && data.item == i.toString()
-      )[0] || false;
+      $userdata.filter((data) => {
+        let kriteria = $active_kriteria.toString();
+        return (
+          data.kriteria == kriteria &&
+          data.sub == sub &&
+          data.item == i.toString()
+        );
+      })[0] || false;
     if (itemdata) {
+      console.log("itemdata :", itemdata);
+
       data_lengkap = itemdata.lengkap;
       data_halaman = itemdata.halaman;
       data_dokumen = itemdata.dokumen;
@@ -162,7 +169,9 @@
           name={mclass("opt")}
           value="1"
           checked={data_lengkap == "1" ? true : false}
-          bind:group={data_lengkap} />Lengkap</label>
+          bind:group={data_lengkap}
+        />Lengkap</label
+      >
     </div>
 
     <div class="form-check form-check-inline">
@@ -173,7 +182,9 @@
           name={mclass("opt")}
           value="2"
           checked={data_lengkap == "2" ? true : false}
-          bind:group={data_lengkap} />Tidak Lengkap</label>
+          bind:group={data_lengkap}
+        />Tidak Lengkap</label
+      >
     </div>
 
     <div class="form-check form-check-inline">
@@ -184,7 +195,9 @@
           name={mclass("opt")}
           value="3"
           checked={data_lengkap == "3" ? true : false}
-          bind:group={data_lengkap} />Tidak Tersedia</label>
+          bind:group={data_lengkap}
+        />Tidak Tersedia</label
+      >
     </div>
   </div>
   <div class="p-2">
@@ -206,7 +219,8 @@
       {#if inupload}
         <div
           class="spinner-border spinner-border-sm text-primary"
-          role="status">
+          role="status"
+        >
           <span class="visually-hidden">Loading...</span>
         </div>
         <span class="ml-2 text-muted">Uploading...</span>
@@ -215,14 +229,16 @@
           on:click={() => {
             document.querySelector("#" + mclass("file")).click();
           }}
-          class="btn btn-light">
+          class="btn btn-light"
+        >
           <i class="fa fa-arrow-circle-up" /> Upload
         </button>
         <input
           type="file"
           id={mclass("file")}
           style="display:none"
-          on:change={file_upload} />
+          on:change={file_upload}
+        />
         <button on:click={() => addlink()} class="btn btn-light">
           <i class="fa fa-link" /> Link
         </button>
@@ -233,49 +249,61 @@
       {#if data_files_1}
         <div>
           <a href={data_files_1} target="_blank"
-            ><i class="fa fa-external-link-alt" />{data_files_1}</a>
+            ><i class="fa fa-external-link-alt" />{data_files_1}</a
+          >
           <span style="margin-left:16px"
             ><i
               class="fa fa-trash"
               on:click={() => {
                 data_files_1 = "";
-              }} /></span>
+              }}
+            /></span
+          >
         </div>
       {/if}
       {#if data_files_2}
         <div>
           <a href={data_files_2} target="_blank"
-            ><i class="fa fa-external-link-alt" />{data_files_2}</a>
+            ><i class="fa fa-external-link-alt" />{data_files_2}</a
+          >
           <span style="margin-left:16px"
             ><i
               class="fa fa-trash"
               on:click={() => {
                 data_files_2 = "";
-              }} /></span>
+              }}
+            /></span
+          >
         </div>
       {/if}
       {#if data_files_3}
         <div>
           <a href={data_files_3} target="_blank"
-            ><i class="fa fa-external-link-alt" />{data_files_3}</a>
+            ><i class="fa fa-external-link-alt" />{data_files_3}</a
+          >
           <span style="margin-left:16px"
             ><i
               class="fa fa-trash"
               on:click={() => {
                 data_files_3 = "";
-              }} /></span>
+              }}
+            /></span
+          >
         </div>
       {/if}
       {#if data_files_4}
         <div>
           <a href={data_files_4} target="_blank"
-            ><i class="fa fa-external-link-alt" />{data_files_4}</a>
+            ><i class="fa fa-external-link-alt" />{data_files_4}</a
+          >
           <span style="margin-left:16px"
             ><i
               class="fa fa-trash"
               on:click={() => {
                 data_files_4 = "";
-              }} /></span>
+              }}
+            /></span
+          >
         </div>
       {/if}
     </div>
@@ -302,7 +330,8 @@
         on:click={() => {
           dosave();
         }}
-        class="btn btn-primary">
+        class="btn btn-primary"
+      >
         <i class="fa fa-check" /> Save
       </button>
       <button
@@ -310,7 +339,8 @@
           closeform(i);
           cancel();
         }}
-        class="btn btn-light">
+        class="btn btn-light"
+      >
         <i class="fa fa-times" /> Close
       </button>
     </div>

@@ -29,10 +29,10 @@
 
   let change_criteria = (i) => {
     active_kriteria.update(() => i + 1);
-    active_lingkup.update(() => 1);
+    // active_lingkup.update(() => 1);
     setTimeout(() => {
       kriteriamenu_active = false;
-    }, 2000);
+    }, 1000);
   };
 
   let s2ab = (s) => {

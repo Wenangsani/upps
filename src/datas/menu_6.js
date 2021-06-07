@@ -260,7 +260,7 @@ export default [
   },
   {
     No: "11",
-    Lingkup: "Kurikulum Mulok per prodi",
+    Lingkup: "Kurikulum Mulok per Prodi",
     Auditee:
       "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
     Dokumen: [
@@ -293,5 +293,261 @@ export default [
       },
     ],
     Catatan: ["Dokumen bukti per prodi dijadikan 1 berkas"],
+  },
+  {
+    No: "12",
+    Lingkup: "Dokumen RPS per prodi",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "RPS seluruh mata kuliah di setiap PS yang dilengkapi dengan dijabarkan CPL, CPMK, peta metode pembelajaran serta peta metode evaluasi yang digunakan berdasarkan topik",
+      },
+    ],
+    Catatan: ["Dokumen bukti per prodi dijadikan 1 berkas"],
+  },
+  {
+    No: "13.a",
+    Lingkup:
+      "Bukti Implementasi Standar SPMI, dan Pedoman Rekonstruksi Kurikulum",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "SK Tim Penyusun",
+      },
+      {
+        Name: "SOP Penyusunan",
+      },
+      {
+        Name: "Bukti kinerja tim : Undangan, absen, notulensi, gambar, draf yang dihasilkan  ",
+      },
+      {
+        Name: "Bukti Lokakarya : Undangan, absen, notulensi, gambar, pihak stakeholders internal dan eksternal, mitra, pakar, berdasarkan hasil analisis yang mendalam dan studi banding  :",
+      },
+      {
+        Name: "Bukti Pelaksanaan Rapat Kerja dengan agenda membahas kurikulum",
+      },
+      {
+        Name: "Bukti Pelaksanaan Rapat senat dengan agenda membahas kurikulum",
+      },
+      {
+        Name: "SK Pengesahan kurikulum",
+      },
+      {
+        Name: "Laporan Lengkap proses pelaksanaan ",
+      },
+      {
+        Name: "Kurikulum Lengkap hasil rekonstruksi berserta SK legalitas",
+      },
+    ],
+    Catatan: ["Dokumen bukti per prodi dijadikan 1 berkas"],
+  },
+  {
+    No: "13.b",
+    Lingkup:
+      "Bukti Implementasi Standar SPMI, dan Pedoman Rekonstruksi Kurikulum",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "SK Tim Penyusun",
+      },
+      {
+        Name: "SOP Penyusunan",
+      },
+      {
+        Name: "Bukti Kinerja Tim",
+      },
+      {
+        Name: "Rapat Pembahasan di RKU/RKF",
+      },
+      {
+        Name: "Laporan Lengkap",
+      },
+      {
+        Name: "Dokumen Kurikulum revisi",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 2 selama tahun 2015-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "13.c",
+    Lingkup:
+      "Bukti Implementasi Standar SPMI, dan Pedoman Rekonstruksi Kurikulum",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "Daftar MK yang melakukan intergrasi pembelajaran dengan penelitian dan pengabdian di PS dilengkapi dengan bentuk integrasi, dalam 3 tahun terakhir",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "13.d",
+    Lingkup:
+      "Bukti Implementasi Standar SPMI, dan Pedoman Rekonstruksi Kurikulum",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "Daftar MK yang melakukan pembelajaran secara daring, dalam 3 tahun terakhir (Nama MK dan Topik Perkuliahan)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "14",
+    Lingkup:
+      "Pelaksanaan Pedoman dan SOP Pembelajaran profesi (lanjutan) untuk memiliki sertifikat kompetensi, atau rekoginisi pembelajaran ",
+    Auditee: "Kasubag Akademik dan Kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "Rekapitulasi Data lulusan/alumni yang mengikuti pembelajaran profesi (lanjutan) untuk memiliki sertifikat kompetensi, atau rekoginis pembelajaran lampau selama 3 tahun terakhir",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "15",
+    Lingkup: "Evaluasi Kepuasan bidang pendidikan ",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS",
+    Dokumen: [
+      {
+        Name: "Evaluasi kepuasan Mahasiswa, Dosen dan tenaga kependidikan terhadap kurikulum dan proses pembelajaran pada UPPS dan PS",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 2 selama tahun 2015-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "16",
+    Lingkup: "Monitoring dan evaluasi proses pembelajaran",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS, GPM",
+
+    Dokumen: [
+      {
+        Name: "Laporan monitoring dan evaluasi proses pembelajaran: mulai dari perencanaan, pelaksanaan, proses pembelajaran, beban belajar tingkat UPPS dan PS",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "17",
+    Lingkup: "Evaluasi Pencapaian Indikator Standar SPMI Kurikulum",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS, GPM",
+    Dokumen: [
+      {
+        Name: "Laporan evaluasi pencapaian indikator standar SPMI kurikulum",
+      },
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "18",
+    Lingkup: "AMI bidang akademik (Jika ada)",
+    Auditee:
+      "Wakil Dekan/Direktur Bidang Akademik, Koordinator Prodi di bawah Rektor, Kasubag akademik dan kemahasiswaan, Ka PS, GPM",
+    Dokumen: [
+      {
+        Name: "Laporan Lengkap AMI yang pernah dilakukan dalam 3 tahun terakhir terkait bidang akademik pada tingkat UPPS dan atau Prodi",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "19",
+    Lingkup: "Tindak Lanjut",
+    Auditee: "Dekan/Direktur/Koordinator PS Bawah Rektor",
+    Dokumen: [
+      {
+        Name: "Bukti tindak lanjut dalam rapat tinjauan managemen terkait hasil evaluasi dan AMI bidang akademik : Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia laporan 3 tahun 2017-2019",
+      "Dokumen bukti per prodi dijadikan 1 berkas",
+    ],
   },
 ];
