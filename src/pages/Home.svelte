@@ -8,6 +8,9 @@
   import Menu1 from "../datas/menu_1";
   import Menu2 from "../datas/menu_2";
   import Menu3 from "../datas/menu_3";
+  import Menu4 from "../datas/menu_4";
+  // import Menu5 from "../datas/menu_5";
+  // import Menu6 from "../datas/menu_6";
 
   let menus = Menu1;
   let hasdata = false;
@@ -22,6 +25,15 @@
       break;
       case 3:
         menus = Menu3;
+      break;
+      case 4:
+        menus = Menu4;
+      break;
+      case 5:
+        // menus = Menu5;
+      break;
+      case 6:
+        // menus = Menu6;
       break;
     }
   }
