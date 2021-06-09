@@ -255,4 +255,236 @@ export default [
       "Dokumen bukti setiap tahun dijadikan 1 berkas",
     ],
   },
+  {
+    No: "16",
+    Lingkup: "Evaluasi Kepuasan Pengguna",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "17",
+    Lingkup: "Evaluasi Standar Mutu Pengmas",
+    Auditee: "BP3F, GPM",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "18",
+    Lingkup: "Evaluasi RIPengmas",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "19",
+    Lingkup: "Evaluasi Renstra pilar Pengmas",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "20",
+    Lingkup: "Evaluasi Renop Pilar Pengmas",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "21",
+    Lingkup: "Evaluasi Program Kerja UPPS dan BP3F erkiat Pengmas",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "22",
+    Lingkup:
+      "Evaluasi Kesesuaian topik pengmas dengan VMTS, RIP Pengmas/Roas map Pengmas  dan Hasil Penelitian",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Tim Pelaksana",
+      },
+      {
+        Name: "SOP",
+      },
+      {
+        Name: "TOR",
+      },
+      {
+        Name: "Instrumen valid  yang digunakan",
+      },
+      {
+        Name: "Bukti kinerja tim",
+      },
+      {
+        Name: "Laporan lengkap",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "23",
+    Lingkup: "AMI Bidang Pengabdian kepada masyarakat (jika Ada)",
+    Auditee: "BP3F",
+    Dokumen: [
+      {
+        Name: "Laporan Lengkap AMI bidang Pengabdian kepada masyarakat dalam 3 tahun terakhir",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
+  {
+    No: "24",
+    Lingkup: "Tindak Lanjut",
+    Auditee: "Dekan/Direktur/Koordinator PS Bawah Rektor",
+    Dokumen: [
+      {
+        Name: "Bukti tindak lanjut dalam rapat tinjauan managemen terkait hasil evaluasi dan AIM bidang Pengabdian kepada masyarakat : Undangan, absen, notulensi, Kebijakan/program kerja sebagai tidak lanjut hasil rapat evaluasi, laporan utuh RTM (minimal tahun 2017-2019)",
+      },
+    ],
+    Catatan: [
+      "Minimal tersedia program kerja 3 tahun 2017-2019",
+      "Dokumen bukti setiap tahun dijadikan 1 berkas",
+    ],
+  },
 ];
